@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+    <com.vinson.gameoflife.GameScreen
+            android:id="@+id/screen"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:visibility="visible"
+            android:gravity="center_horizontal"
+            android:onClick="onClickGameScreen"/>
+
+    <Button
+            android:text="Smaller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="438dp"
+            tools:layout_editor_absoluteX="6dp"
+            android:onClick="onClickSmaller"
+            android:id="@+id/btn_smaller"/>
+
+    <Button
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="437dp"
+            tools:layout_editor_absoluteX="162dp"
+            android:onClick="onClickResetGame"
+            android:id="@+id/btn_reset"/>
+    <Button
+            android:text="Bigger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="437dp"
+            tools:layout_editor_absoluteX="317dp"
+            android:onClick="onClickBigger"
+            android:id="@+id/btn_bigger"/>
+
+</LinearLayout>
