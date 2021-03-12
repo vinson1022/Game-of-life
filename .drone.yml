@@ -6,5 +6,10 @@ trigger:
   branch:
   - master
   event:
-  - push
-  - pull_request
+    - cron
+    - custom
+    - push
+    - pull_request
+    - tag
+    - promote
+    - rollback
