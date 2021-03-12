@@ -1,9 +1,14 @@
 kind: pipeline
 type: docker
 name: default
-image: androidsdk/android-30
-script:
-  - ./gradlew test assemble -PdisablePreDex
+
+steps:
+- name: test
+  image: androidsdk/android-30
+  commands:
+  - gradle assemble
+  - gradle test
+
 trigger:
   event:
     - cron
