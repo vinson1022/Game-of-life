@@ -1,5 +1,6 @@
 kind: pipeline
 type: docker
+name: default
 image: androidsdk/android-30
 script:
   - ./gradlew test assemble -PdisablePreDex
