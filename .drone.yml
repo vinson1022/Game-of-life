@@ -2,3 +2,8 @@ image: androidsdk/android-30
 env:
 script:
   - ./gradlew test assemble -PdisablePreDex
+trigger:
+  branch:
+  - master
+  event:
+  - pull_request
