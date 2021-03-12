@@ -4,8 +4,6 @@ image: androidsdk/android-30
 script:
   - ./gradlew test assemble -PdisablePreDex
 trigger:
-  branch:
-  - master
   event:
     - cron
     - custom
