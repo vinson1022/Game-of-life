@@ -6,8 +6,7 @@ steps:
 - name: test
   image: androidsdk/android-30
   commands:
-  - gradle assemble
-  - gradle test
+  - ./gradlew test
 
 trigger:
   event:
