@@ -1,0 +1,4 @@
+image: androidsdk/android-30
+env:
+script:
+  - ./gradlew test assemble -PdisablePreDex
