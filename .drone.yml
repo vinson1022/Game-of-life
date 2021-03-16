@@ -8,8 +8,7 @@ platform:
 steps:
 - name: test
   commands:
-  - docker run --rm -v /Users/snapask-ci/Developer/masterin-android:/tmp/src --platform linux/amd64 androidsdk/android-30 bash
-  - ./gradlew test
+  - docker run --rm -v -w="tmp/src" /Users/snapask-ci/Developer/masterin-android:/tmp/src --platform linux/amd64 androidsdk/android-30 ./gradlew test
 
 trigger:
   event:
