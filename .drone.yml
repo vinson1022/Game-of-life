@@ -1,12 +1,10 @@
 kind: pipeline
-type: exec
+type: docker
 name: default
-
-platform:
-  os: darwin
 
 steps:
 - name: test
+  image: android30
   commands:
   - ./gradlew test
 
