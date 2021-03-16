@@ -1,10 +1,9 @@
 kind: pipeline
-type: docker
+type: exec
 name: default
 
 steps:
 - name: test
-  image: androidsdk/android-30
   commands:
   - chmod +x ./gradlew && ./gradlew test
 
