@@ -8,6 +8,7 @@ platform:
 steps:
 - name: test
   commands:
+  - ls -l
   - ./gradlew test
 
 trigger:
