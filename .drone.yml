@@ -8,7 +8,7 @@ platform:
 steps:
 - name: test
   commands:
-  - ./gradlew test
+  - sh ./gradlew test
 
 trigger:
   event:
