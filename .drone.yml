@@ -8,7 +8,7 @@ platform:
 steps:
 - name: test
   commands:
-  - chmod +x ./gradlew && ./gradlew test
+  - ./gradlew test
 
 trigger:
   event:
