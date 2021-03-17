@@ -10,7 +10,7 @@ steps:
   environment:
     ANDROID_SDK_ROOT : /Users/snapask-ci/Library/Android/sdk
     ANDROID_HOME : /Users/snapask-ci/Library/Android/sdk
-    JAVA_HOME : /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+    JAVA_HOME : /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
   commands:
   - ./gradlew clean
   - ./gradlew test
