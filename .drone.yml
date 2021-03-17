@@ -1,14 +1,16 @@
 kind: pipeline
-type: exec
+type: docker
 name: default
 
 platform:
-  os: darwin
+  os: linux
+  arch: amd64
 
 steps:
 - name: test
+  image: androidsdk/android-30
   commands:
-  - docker run --rm -w /src --platform linux/amd64 androidsdk/android-30 ./gradlew test
+  - ./gradlew test
 
 trigger:
   event:
