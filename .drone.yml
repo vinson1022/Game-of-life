@@ -9,6 +9,7 @@ steps:
 - name: build
   environment:
     ANDROID_SDK_ROOT : /Users/snapask-ci/Library/Android/sdk
+    ANDROID_HOME : /Users/snapask-ci/Library/Android/sdk
   commands:
   - ./gradlew test
 
