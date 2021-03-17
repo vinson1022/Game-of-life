@@ -11,6 +11,7 @@ steps:
     ANDROID_SDK_ROOT : /Users/snapask-ci/Library/Android/sdk
     ANDROID_HOME : /Users/snapask-ci/Library/Android/sdk
     JAVA_HOME : /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+    PATH : $JAVA_HOME/bin:$PATH:
   commands:
   - ./gradlew clean
   - ./gradlew test
