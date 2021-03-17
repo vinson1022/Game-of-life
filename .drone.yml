@@ -6,9 +6,11 @@ platform:
   os: darwin
 
 steps:
-- name: test
+- name: build
+  environment:
+    ANDROID_SDK_ROOT : /Users/snapask-ci/Library/Android/sdk
   commands:
-  - docker run --rm -v `pwd`:`pwd` -w `pwd` --platform linux/amd64 androidsdk/android-30 ./gradlew test
+  - ./gradlew test
 
 trigger:
   event:
