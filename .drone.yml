@@ -23,7 +23,7 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     template: > 
       hello world
 
