@@ -12,13 +12,13 @@ steps:
     ANDROID_HOME : /Users/snapask-ci/Library/Android/sdk
     JAVA_HOME : /Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
   commands:
-  - ./gradlew clean
+  - echo "hello world"
 
 - name: slack
   slack-notify:
     image: plugins/slack
     webhook: https://hooks.slack.com/services/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
-    channel: android
+    channel: #android
     username: Drone CI
     icon_url: https://avatars.githubusercontent.com/u/2181346?s=200&v=4
     template: >
