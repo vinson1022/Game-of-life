@@ -24,7 +24,6 @@ steps:
   image: plugins/slack
   settings:
     webhook: https://hooks.slack.com/services/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
-    channel: #android
     username: Drone CI
     icon_url: https://avatars.githubusercontent.com/u/2181346?s=200&v=4
     link_names: true
