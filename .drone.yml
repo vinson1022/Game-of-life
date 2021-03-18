@@ -15,25 +15,25 @@ steps:
   - echo "hello world"
   - export
 
+---
+kind: pipeline
+type: docker
+name: slack
+steps:
 - name: slack
-  commands:
-  - docker run --rm \
-    -e SLACK_WEBHOOK=https://hooks.slack.com/services/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 \
-    -e PLUGIN_CHANNEL=#android \
-    -e PLUGIN_USERNAME=DRONE CI \
-    -e DRONE_REPO_OWNER=octocat \
-    -e DRONE_REPO_NAME=hello-world \
-    -e DRONE_COMMIT_SHA=7fd1a60b01f91b314f59955a4e4d4e80d8edf11d \
-    -e DRONE_COMMIT_BRANCH=master \
-    -e DRONE_COMMIT_AUTHOR=octocat \
-    -e DRONE_COMMIT_AUTHOR_EMAIL=octocat@github.com \
-    -e DRONE_COMMIT_AUTHOR_AVATAR="https://avatars0.githubusercontent.com/u/583231?s=460&v=4" \
-    -e DRONE_COMMIT_AUTHOR_NAME="The Octocat" \
-    -e DRONE_BUILD_NUMBER=1 \
-    -e DRONE_BUILD_STATUS=success \
-    -e DRONE_BUILD_LINK=http://github.com/octocat/hello-world \
-    -e DRONE_TAG=1.0.0 \
-    plugins/slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channel: #android
+    username: Drone CI
+    icon_url: https://avatars.githubusercontent.com/u/2181346?s=200&v=4
+    link_names: true
+    template: >
+        {{#success build.status}}
+          build {{build.number}} succeeded. Good job. :+1:
+        {{else}}
+          build {{build.number}} failed. Fix me please. :sob: <@channel>
+        {{/success}}
 
 trigger:
   event:
