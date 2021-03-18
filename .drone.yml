@@ -17,7 +17,8 @@ steps:
 - name: slack
 slack-notify:
   settings:
-      webhook: https://hooks.slack.com/services/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
+      secrets: [slack_webhook]
+      webhook: $slack_webhook
       template: >
         hello world
 
