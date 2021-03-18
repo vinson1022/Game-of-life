@@ -35,6 +35,7 @@ steps:
       
     when:
       status: [ success, failure ]
+      branch: [ master ]
 
 trigger:
   event:
