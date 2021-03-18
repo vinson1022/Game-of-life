@@ -14,6 +14,27 @@ steps:
   commands:
   - ./gradlew clean
   - ./gradlew test
+
+
+trigger:
+  event:
+    - cron
+    - custom
+    - push
+    - pull_request
+    - tag
+    - promote
+    - rollback
+
+---
+
+kind: pipeline
+type: exec
+name: default
+
+platform:
+  os: darwin
+
 steps:
 - name: slack
     image: plugins/slack
@@ -29,13 +50,3 @@ steps:
         {{else}}
           build {{build.number}} failed. Fix me please. :sob: <@channel>
         {{/success}}
-
-trigger:
-  event:
-    - cron
-    - custom
-    - push
-    - pull_request
-    - tag
-    - promote
-    - rollback
