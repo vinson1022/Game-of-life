@@ -23,7 +23,7 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
 
 trigger:
   event:
