@@ -13,7 +13,7 @@ steps:
     JAVA_HOME : /Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
   commands:
   - echo "hello world"
-  - curl -X POST --data-urlencode 'payload={\"channel\": \"#android\", \"username\": \"webhookbot\", \"text\": \"This is posted to #android and comes from a bot named webhookbot.\", \"icon_emoji\": \":ghost:\"}' https://hooks.slack.com/services/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
+  - curl -X POST --data-urlencode 'payload={"channel": "#android", "username": "webhookbot", "text": "This is posted to #android and comes from a bot named webhookbot.", "icon_emoji": ":ghost:"}' https://hooks.slack.com/services/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
 
 - name: slack
   slack-notify:
