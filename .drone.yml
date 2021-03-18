@@ -1,29 +1,11 @@
 kind: pipeline
-type: exec
-name: default
-
-platform:
-  os: darwin
-
-steps:
-- name: build
-  environment:
-    ANDROID_SDK_ROOT : /Users/snapask-ci/Library/Android/sdk
-    ANDROID_HOME : /Users/snapask-ci/Library/Android/sdk
-    JAVA_HOME : /Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
-  commands:
-  - echo "hello world"
-  - export
-
----
-kind: pipeline
 type: docker
 name: slack
 steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     template: > 
       hello world
 
