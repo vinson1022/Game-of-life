@@ -17,11 +17,7 @@ steps:
 - name: slack
   secrets: [slack_webhook]
   commands:
-  - docker run --rm \
-    -e SLACK_WEBHOOK=$slack_webhook \
-    -e PLUGIN_CHANNEL=#android \
-    -e DRONE_BUILD_STATUS=success \
-    plugins/slack
+  - docker run --rm -e SLACK_WEBHOOK=$slack_webhook -e PLUGIN_CHANNEL=#android -e DRONE_BUILD_STATUS=success plugins/slack
 
 trigger:
   event:
