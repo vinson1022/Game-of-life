@@ -24,7 +24,8 @@ steps:
   image: plugins/slack
   settings:
     webhook: https://hooks.slack.com/services/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
-    template: > hello world
+    template: > 
+      hello world
 
 trigger:
   event:
