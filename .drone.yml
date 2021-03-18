@@ -15,12 +15,13 @@ steps:
   - echo "hello world"
 
 - name: slack
-slack-notify:
-  settings:
-      secrets: [slack_webhook]
-      webhook: $slack_webhook
-      template: >
-        hello world
+  secrets: [slack_webhook]
+  commands:
+  - docker run --rm \
+    -e SLACK_WEBHOOK=$slack_webhook \
+    -e PLUGIN_CHANNEL=#android \
+    -e DRONE_BUILD_STATUS=success \
+    plugins/slack
 
 trigger:
   event:
