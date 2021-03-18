@@ -23,7 +23,7 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     template: > hello world
 
 trigger:
