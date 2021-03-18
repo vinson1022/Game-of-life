@@ -23,14 +23,9 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
 
 trigger:
   event:
-    - cron
-    - custom
     - push
     - pull_request
-    - tag
-    - promote
-    - rollback
