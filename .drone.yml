@@ -17,7 +17,7 @@ steps:
 - name: slack
   slack-notify:
     image: plugins/slack
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: #android
     username: Drone CI
     icon_url: https://avatars.githubusercontent.com/u/2181346?s=200&v=4
